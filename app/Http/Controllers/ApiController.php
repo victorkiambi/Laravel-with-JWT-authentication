@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\User; 
+use App\User;
+ 
 
 use JWTAuth;
 
@@ -12,6 +13,8 @@ class ApiController extends Controller
 {
     //
     public $loginAfterSignUp = true;
+
+  
  
     public function register(Request $request)
     {
@@ -72,12 +75,14 @@ class ApiController extends Controller
  
     public function getAuthUser(Request $request)
     {
-        $this->validate($request, [
-            'token' => 'required'
-        ]);
+        // $this->validate($request, [
+        //     'token' => 'required'
+        // ]);
+
+        // return "stuff";
  
-        $user = JWTAuth::authenticate($request->token);
- 
+        $user = JWTAuth::authenticate($request->token); 
         return response()->json(['user' => $user]);
     }
+   
 }
