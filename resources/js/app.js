@@ -34,6 +34,7 @@ import axios from 'axios'
 import Vue from 'vue'
 import VueAxios from 'vue-axios'
 import VueRouter from 'vue-router'
+import Vuetify from 'vuetify'
 import auth from './auth'
 import App from '@/views/App';
 

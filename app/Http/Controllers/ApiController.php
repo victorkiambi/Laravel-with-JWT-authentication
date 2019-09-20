@@ -49,7 +49,11 @@ class ApiController extends Controller
         return response()->json([
             'success' => true,
             'token' => $jwt_token,
-        ]);
+        ])
+        ->header('Authorization', $jwt_token);
+        ;
+
+        
     }
  
     public function logout(Request $request)
