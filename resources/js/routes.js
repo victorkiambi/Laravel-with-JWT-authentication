@@ -3,7 +3,6 @@ import Vue from 'vue'
 
 
 import Home from '@/js/components/Home'
-import Menu from '@/js/components/Menu'
 
 import About from '@/js/components/About'
 import Register from '@/js/components/Register'

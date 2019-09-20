@@ -7,7 +7,7 @@
           <div class="card-body">
             <div class="alert alert-danger" v-if="has_error && !success">
               <p v-if="error == 'login_error'">Validation Errors.</p>
-              <p v-else>Error, unable to connect with these credentials.</p>
+              <p v-else>Please correct the errors before submitting.</p>
             </div>
             <form autocomplete="off" @submit.prevent="login" method="post">
               <div class="form-group">

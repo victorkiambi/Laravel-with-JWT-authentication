@@ -58,12 +58,15 @@ class ApiController extends Controller
  
     public function logout(Request $request)
     {
-        $this->validate($request, [
-            'token' => 'required'
-        ]);
+
+        // $this->validate($request, [
+        //     'token' => 'required'
+        // ]);
  
+        // return "logout";
+
         try {
-            JWTAuth::invalidate($request->token);
+            JWTAuth::invalidate(JWTAuth::getToken());
  
             return response()->json([
                 'success' => true,

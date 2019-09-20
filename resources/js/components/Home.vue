@@ -1,6 +1,9 @@
 <template>
 
     <div class="container">
+
+            <menu-comp></menu-comp>
+
         <div class="card card-default">
             <div class="card-header">Home</div>
             <div class="card-body">
@@ -15,3 +18,19 @@
     </div>
     
 </template>
+
+<script>
+  import Menu from '@/js/components/Menu.vue'
+
+  export default {
+    data() {
+      return {
+        //
+      }
+    },
+    components: {
+      //
+      Menu
+    }
+  }
+</script>

@@ -7,7 +7,7 @@
           <div class="card-body">
             <div class="alert alert-danger" v-if="has_error && !success">
                 <p v-if="error == 'registration_validation_error'">Validation Errors.</p>
-                <p v-else>Error, can not register at the moment. If the problem persists, please contact an administrator.</p>
+                <p v-else>Please correct the errors before submitting.</p>
             </div>
             <form autocomplete="off" @submit.prevent="register" v-if="!success" method="post">
                 <div class="form-group" v-bind:class="{ 'has-error': has_error && errors.name }">

@@ -25,7 +25,7 @@ const config = {
   },
   logoutData: {
     url: '/logout', 
-    method: 'POST', 
+    method: 'GET', 
     redirect: '/', 
     makeRequest: true
   },
@@ -35,7 +35,7 @@ const config = {
     enabled: true
   },
   refreshData: {
-    url: '/refresh', 
+    url: '/user', 
     method: 'GET', 
     enabled: true, 
     interval: 30
