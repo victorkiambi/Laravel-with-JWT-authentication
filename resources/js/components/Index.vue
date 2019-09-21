@@ -1,23 +1,22 @@
 <template>
-    <div id="main">
-        <header id="header">
-            <Menu></Menu>
-        </header>
-        <div id="content">
-            <router-view></router-view>
-        </div>
-    </div>
+  <v-app>
+    <core-app-bar />
+
+    <core-drawer />
+
+    <core-view />
+
+    <core-footer />
+  </v-app>
 </template>
+
 <script>
- 
   export default {
-    data() {
-      return {
-        //
-      }
-    },
     components: {
-      
+      CoreDrawer: () => import('@/js/components/core/Drawer'),
+      CoreFooter: () => import('@/js/components/core/Footer'),
+      CoreAppBar: () => import('@/js/components/core/AppBar'),
+      CoreView: () => import('@/js/components/core/View')
     }
   }
 </script>

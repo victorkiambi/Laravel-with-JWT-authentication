@@ -53,7 +53,7 @@
           success: function() {
             // handle redirection
             app.success = true
-            const redirectTo = 'dashboard'
+            const redirectTo = 'index'
             this.$router.push({name: redirectTo})
           },
           error: function() {

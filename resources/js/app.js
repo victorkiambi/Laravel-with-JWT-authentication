@@ -27,24 +27,30 @@ Vue.component('menu-comp', require('./components/Menu.vue').default);
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-// import './bootstrap';
+import './bootstrap';
 
 import 'es6-promise/auto'
 import axios from 'axios'
 import Vue from 'vue'
 import VueAxios from 'vue-axios'
 import VueRouter from 'vue-router'
-import Vuetify from 'vuetify'
+import VueAuth from '@websanova/vue-auth'
 import auth from './auth'
+import routes from './routes'
+import store from '@/store'
+
+import '@/plugins'
+
+import vuetify from '@/plugins/vuetify'
+import '@/plugins/chartist.js'
+import '@/plugins/index.js'
+import '@/plugins/vuetify.js'
+import '@/plugins/components.js'
+// import '@/plugins/base.js'
+
+
 import App from '@/views/App';
 
-
-import Routes from '@/js/routes.js'
-import routes from './routes'
-import VueAuth from '@websanova/vue-auth'
-
-// Set Vue globally
-// Set Vue router
 
 Vue.use(VueRouter)
 const router = new VueRouter({
@@ -54,21 +60,15 @@ const router = new VueRouter({
 })
 
 Vue.router = router
-
-
 // Set Vue authentication
 Vue.use(VueAxios, axios)
 axios.defaults.baseURL = `http://localhost:8000/api`
 Vue.use(VueAuth, auth)
 // Load Index
 
-
-
-
-const app = new Vue({
-  el: '#app',
+ new Vue({
   router,
+  store,
+  vuetify,
   render: h => h(App),
-});
-
-export default app;
+}).$mount('#app')

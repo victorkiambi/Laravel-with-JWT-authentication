@@ -1,8 +1,8 @@
 <template>
 
     <div class="container">
+      <Menu></Menu>
 
-            <menu-comp></menu-comp>
 
         <div class="card card-default">
             <div class="card-header">Home</div>
