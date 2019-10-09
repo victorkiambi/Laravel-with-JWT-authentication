@@ -8,8 +8,8 @@
       <v-col cols="12">
         <material-card
           color="green"
-          title="Simple Table"
-          text="Here is a subtitle for this table"
+          title="Students Table"
+          
         >
           <v-data-table
             :headers="headers"
@@ -44,12 +44,12 @@
       headers: [
         {
           sortable: false,
-          text: 'Name',
+          text: 'Student Name',
           value: 'name'
         },
         {
           sortable: false,
-          text: 'Country',
+          text: 'Student ',
           value: 'country'
         },
         {

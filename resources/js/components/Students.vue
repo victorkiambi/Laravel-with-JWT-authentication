@@ -10,13 +10,12 @@
       >
         <material-card
           color="green"
-          title="Edit Profile"
-          text="Complete your profile"
+          title="Add Student"
         >
           <v-form>
             <v-container class="py-0">
               <v-row>
-                <v-col
+                <!-- <v-col
                   cols="12"
                   md="4"
                 >
@@ -24,66 +23,78 @@
                     label="Company (disabled)"
                     disabled
                   />
+                </v-col> -->
+
+                <v-col
+                  cols="12"
+                  md="5"
+                >
+                  <v-text-field
+                    class="purple-input"
+                    label="Student Name"
+                  />
                 </v-col>
+
+                <v-col
+                  cols="12"
+                  md="2"
+                >
+                  <v-text-field
+                    label="Student Age"
+                    class="purple-input"
+                  />
+                </v-col>
+                 <v-col
+                  cols="12"
+                  md="2"
+                >
+                  <v-text-field
+                    label="Student Term"
+                    class="purple-input"
+                  />
+                </v-col>
+                 <v-col
+                  cols="12"
+                  md="3"
+                >
+                  <v-text-field
+                    label="Student Grade"
+                    class="purple-input"
+                  />
+                </v-col>
+
+
+            
 
                 <v-col
                   cols="12"
                   md="4"
                 >
                   <v-text-field
+                    label="Guardian Name"
                     class="purple-input"
-                    label="User Name"
                   />
                 </v-col>
 
-                <v-col
+                <v-col cols="12"  
+                  md="4">
+                  <v-text-field
+                    label="Guardian Contact"
+                    class="purple-input"
+                  />
+                </v-col>
+
+                <!-- <v-col
                   cols="12"
                   md="4"
                 >
                   <v-text-field
-                    label="Email Address"
+                    label="Student Term"
                     class="purple-input"
                   />
-                </v-col>
+                </v-col> -->
 
-                <v-col
-                  cols="12"
-                  md="6"
-                >
-                  <v-text-field
-                    label="First Name"
-                    class="purple-input"
-                  />
-                </v-col>
-
-                <v-col
-                  cols="12"
-                  md="6"
-                >
-                  <v-text-field
-                    label="Last Name"
-                    class="purple-input"
-                  />
-                </v-col>
-
-                <v-col cols="12">
-                  <v-text-field
-                    label="Adress"
-                    class="purple-input"
-                  />
-                </v-col>
-
-                <v-col
-                  cols="12"
-                  md="4"
-                >
-                  <v-text-field
-                    label="City"
-                    class="purple-input"
-                  />
-                </v-col>
-
-                <v-col
+                <!-- <v-col
                   cols="12"
                   md="4"
                 >
@@ -110,14 +121,14 @@
                     label="About Me"
                     value="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
                   />
-                </v-col>
+                </v-col> -->
 
                 <v-col
                   cols="12"
                   class="text-right"
                 >
                   <v-btn color="success">
-                    Update Profile
+                    Save
                   </v-btn>
                 </v-col>
               </v-row>
@@ -125,7 +136,7 @@
           </v-form>
         </material-card>
       </v-col>
-      <v-col
+      <!-- <v-col
         cols="12"
         md="4"
       >
@@ -157,7 +168,7 @@
             </v-btn>
           </v-card-text>
         </material-card>
-      </v-col>
+      </v-col> -->
     </v-row>
   </v-container>
 </template>

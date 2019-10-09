@@ -19,7 +19,7 @@
           color="info"
           type="Line"
         >
-          <h4 class="title font-weight-light">Daily Sales</h4>
+          <h4 class="title font-weight-light">Student Grade</h4>
           <p class="category d-inline-flex font-weight-light">
             <v-icon
               color="green"

@@ -11,7 +11,8 @@ import App from '@/js/components/App'
 import Register from '@/js/components/Register'
 import Login from '@/js/components/Login'
 import Dashboard from '@/js/components/Dashboard'
-import UserProfile from '@/js/components/UserProfile'
+import Students from '@/js/components/Students'
+import Payments from '@/js/components/Payments'
 import TableList from '@/js/components/TableList'
 import Index from '@/js/components/Index'
 
@@ -79,9 +80,17 @@ const routes = [
         }
       },
       {
-        path: '/user-profile',
-        name: 'user profile',
-        component: UserProfile,
+        path: '/students',
+        name: 'add student',
+        component: Students,
+        meta: {
+          auth: true
+        }
+      },
+      {
+        path: '/payments',
+        name: 'add payment',
+        component: Payments,
         meta: {
           auth: true
         }

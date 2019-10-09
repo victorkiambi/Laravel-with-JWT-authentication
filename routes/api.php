@@ -26,4 +26,19 @@ Route::group(['middleware' => 'auth.jwt'], function () {
     Route::post('products', 'ProductController@store');
     Route::put('products/{id}', 'ProductController@update');
     Route::delete('products/{id}', 'ProductController@destroy');
+
+
+    Route::get('students', 'StudentController@index');
+    Route::get('students/{id}', 'StudentController@show');
+    Route::post('students', 'StudentController@store');
+    Route::put('students/{id}', 'StudentController@update');
+    Route::delete('students/{id}', 'StudentController@destroy');
+
+    Route::get('guardian', 'GuardianController@index');
+    Route::get('guardian/{id}', 'GuardianController@show');
+    Route::post('guardian', 'GuardianController@store');
+    Route::put('guardian/{id}', 'GuardianController@update');
+    Route::delete('guardian/{id}', 'GuardianController@destroy');
+
+
 });

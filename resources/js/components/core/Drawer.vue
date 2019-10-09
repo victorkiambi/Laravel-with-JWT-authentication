@@ -28,7 +28,7 @@
       </v-list-item-avatar>
 
       <v-list-item-title class="title">
-        VUETIFY MD
+        Elicat Admin
       </v-list-item-title>
     </v-list-item>
 
@@ -52,7 +52,7 @@
       </v-list-item>
     </v-list>
 
-    <template v-slot:append>
+    <!-- <template v-slot:append>
       <v-list nav>
         <v-list-item
           to="/upgrade"
@@ -66,7 +66,7 @@
           </v-list-item-title>
         </v-list-item>
       </v-list>
-    </template>
+    </template> -->
   </v-navigation-drawer>
 </template>
 
@@ -92,35 +92,42 @@
           text: 'Dashboard'
         },
         {
-          to: '/user-profile',
+          to: '/students',
           icon: 'mdi-account',
-          text: 'User Profile'
+          text: 'Add Student'
         },
+
+        {
+          to: '/payments',
+          icon: 'mdi-credit-card',
+          text: 'Add Payment'
+        },
+        
         {
           to: '/table-list',
           icon: 'mdi-clipboard-outline',
           text: 'Table List'
         },
-        {
-          to: '/typography',
-          icon: 'mdi-format-font',
-          text: 'Typography'
-        },
-        {
-          to: '/icons',
-          icon: 'mdi-chart-bubble',
-          text: 'Icons'
-        },
-        {
-          to: '/maps',
-          icon: 'mdi-map-marker',
-          text: 'Maps'
-        },
-        {
-          to: '/notifications',
-          icon: 'mdi-bell',
-          text: 'Notifications'
-        }
+        // {
+        //   to: '/typography',
+        //   icon: 'mdi-format-font',
+        //   text: 'Typography'
+        // },
+        // {
+        //   to: '/icons',
+        //   icon: 'mdi-chart-bubble',
+        //   text: 'Icons'
+        // },
+        // {
+        //   to: '/maps',
+        //   icon: 'mdi-map-marker',
+        //   text: 'Maps'
+        // },
+        // {
+        //   to: '/notifications',
+        //   icon: 'mdi-bell',
+        //   text: 'Notifications'
+        // }
       ]
     }),
 
