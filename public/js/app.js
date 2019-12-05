@@ -3152,6 +3152,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _js_components_Menu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/js/components/Menu */ "./resources/js/components/Menu.vue");
 //
 //
 //
@@ -3355,7 +3356,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+
 /* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    Menu: _js_components_Menu__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
   data: function data() {
     return {
       dailySalesChart: {
@@ -3546,7 +3552,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _js_components_Menu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/js/components/Menu */ "./resources/js/components/Menu.vue");
 //
 //
 //
@@ -3558,10 +3563,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-
+// import Menu from '@/js/components/Menu'
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
-    Menu: _js_components_Menu__WEBPACK_IMPORTED_MODULE_0__["default"],
+    // Menu,
     CoreDrawer: function CoreDrawer() {
       return __webpack_require__.e(/*! import() */ 2).then(__webpack_require__.bind(null, /*! @/js/components/core/Drawer */ "./resources/js/components/core/Drawer.vue"));
     },
@@ -3738,6 +3743,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _js_components_Menu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/js/components/Menu */ "./resources/js/components/Menu.vue");
 //
 //
 //
@@ -3901,7 +3907,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ __webpack_exports__["default"] = ({//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    Menu: _js_components_Menu__WEBPACK_IMPORTED_MODULE_0__["default"]
+  }
 });
 
 /***/ }),
@@ -4008,6 +4019,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _js_components_Menu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/js/components/Menu */ "./resources/js/components/Menu.vue");
 //
 //
 //
@@ -4183,7 +4195,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ __webpack_exports__["default"] = ({//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    Menu: _js_components_Menu__WEBPACK_IMPORTED_MODULE_0__["default"]
+  } //
+
 });
 
 /***/ }),
@@ -29294,6 +29312,8 @@ var render = function() {
     "v-container",
     { attrs: { "fill-height": "", fluid: "", "grid-list-xl": "" } },
     [
+      _c("Menu"),
+      _vm._v(" "),
       _c(
         "v-layout",
         { attrs: { wrap: "" } },
@@ -29322,13 +29342,15 @@ var render = function() {
                     { staticClass: "category d-inline-flex font-weight-light" },
                     [
                       _c("v-icon", { attrs: { color: "green", small: "" } }, [
-                        _vm._v("\n            mdi-arrow-up\n          ")
+                        _vm._v("\n              mdi-arrow-up\n            ")
                       ]),
                       _vm._v(" "),
                       _c("span", { staticClass: "green--text" }, [
                         _vm._v("55%")
                       ]),
-                      _vm._v(" \n          increase in today's sales\n        ")
+                      _vm._v(
+                        " \n            increase in today's sales\n          "
+                      )
                     ],
                     1
                   ),
@@ -29340,7 +29362,11 @@ var render = function() {
                       _c(
                         "v-icon",
                         { staticClass: "mr-2", attrs: { small: "" } },
-                        [_vm._v("\n            mdi-clock-outline\n          ")]
+                        [
+                          _vm._v(
+                            "\n              mdi-clock-outline\n            "
+                          )
+                        ]
                       ),
                       _vm._v(" "),
                       _c(
@@ -29392,7 +29418,11 @@ var render = function() {
                       _c(
                         "v-icon",
                         { staticClass: "mr-2", attrs: { small: "" } },
-                        [_vm._v("\n            mdi-clock-outline\n          ")]
+                        [
+                          _vm._v(
+                            "\n              mdi-clock-outline\n            "
+                          )
+                        ]
                       ),
                       _vm._v(" "),
                       _c(
@@ -29442,7 +29472,11 @@ var render = function() {
                       _c(
                         "v-icon",
                         { staticClass: "mr-2", attrs: { small: "" } },
-                        [_vm._v("\n            mdi-clock-outline\n          ")]
+                        [
+                          _vm._v(
+                            "\n              mdi-clock-outline\n            "
+                          )
+                        ]
                       ),
                       _vm._v(" "),
                       _c(
@@ -29684,11 +29718,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "v-app",
-    [_c("Menu"), _vm._v(" "), _c("core-drawer"), _vm._v(" "), _c("core-view")],
-    1
-  )
+  return _c("v-app", [_c("core-drawer"), _vm._v(" "), _c("core-view")], 1)
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -30005,6 +30035,8 @@ var render = function() {
     "v-container",
     { attrs: { "fill-height": "", fluid: "" } },
     [
+      _c("Menu"),
+      _vm._v(" "),
       _c(
         "v-row",
         { attrs: { justify: "center" } },
@@ -30435,6 +30467,8 @@ var render = function() {
     "v-container",
     { attrs: { "fill-height": "", fluid: "" } },
     [
+      _c("Menu"),
+      _vm._v(" "),
       _c(
         "v-row",
         { attrs: { justify: "center" } },
@@ -85535,8 +85569,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/brucewayne/Documents/My stuff/projects/laraveljwt/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/brucewayne/Documents/My stuff/projects/laraveljwt/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/victor/Documents/Projects/Laravel/Laravel-with-JWT-authentication/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/victor/Documents/Projects/Laravel/Laravel-with-JWT-authentication/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

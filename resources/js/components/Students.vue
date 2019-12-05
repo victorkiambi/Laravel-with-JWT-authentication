@@ -3,6 +3,7 @@
     fill-height
     fluid
   >
+  <Menu/>
     <v-row justify="center">
       <v-col
         cols="12"
@@ -174,7 +175,11 @@
 </template>
 
 <script>
+import Menu from '@/js/components/Menu'
   export default {
+    components: {
+      Menu,
+    }
   //
   }
 </script>

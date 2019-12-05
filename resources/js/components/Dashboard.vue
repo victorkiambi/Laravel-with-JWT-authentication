@@ -1,10 +1,11 @@
 <template>
+
   <v-container
     fill-height
     fluid
     grid-list-xl
   > 
-
+<Menu/>
   
     <v-layout wrap>
       <v-flex
@@ -204,8 +205,12 @@
 <script>
 
 
+import Menu from '@/js/components/Menu'
 
 export default {
+   components: {
+      Menu,
+   },
   data () {
     return {
       dailySalesChart: {
