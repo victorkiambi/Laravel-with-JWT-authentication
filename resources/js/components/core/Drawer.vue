@@ -96,6 +96,11 @@
           icon: 'mdi-account',
           text: 'Add Student'
         },
+         {
+          to: '/guardian',
+          icon: 'mdi-account',
+          text: 'Add Guardian'
+        },
 
         {
           to: '/payments',

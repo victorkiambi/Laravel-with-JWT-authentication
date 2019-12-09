@@ -108,6 +108,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         icon: 'mdi-account',
         text: 'Add Student'
       }, {
+        to: '/guardian',
+        icon: 'mdi-account',
+        text: 'Add Guardian'
+      }, {
         to: '/payments',
         icon: 'mdi-credit-card',
         text: 'Add Payment'

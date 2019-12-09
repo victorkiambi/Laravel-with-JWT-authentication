@@ -3,15 +3,13 @@ import Vue from 'vue'
 
 
 import Home from '@/js/components/Home'
-
 import About from '@/js/components/About'
 import App from '@/js/components/App'
-
-
 import Register from '@/js/components/Register'
 import Login from '@/js/components/Login'
 import Dashboard from '@/js/components/Dashboard'
 import Students from '@/js/components/Students'
+import Guardian from '@/js/components/Guardian'
 import Payments from '@/js/components/Payments'
 import TableList from '@/js/components/TableList'
 import Index from '@/js/components/Index'
@@ -83,6 +81,14 @@ const routes = [
         path: '/students',
         name: 'add student',
         component: Students,
+        meta: {
+          auth: true
+        }
+      },
+      {
+        path: '/guardian',
+        name: 'add guardian',
+        component: Guardian,
         meta: {
           auth: true
         }

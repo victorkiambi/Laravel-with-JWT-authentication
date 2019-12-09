@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Student;
+use App\Guardian;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
+
 use JWTAuth;
 
 
@@ -65,36 +68,40 @@ class StudentController extends Controller
     public function store(Request $request)
     {
         //
-        $this->validate(request(), [
+        $validator = Validator::make($request->all(), [
             'name' => 'required',
             'age' => 'required|integer',
             'grade' => 'required|integer',
-            'term' => 'required|integer'
-            // 'guardian' => 'required',
-            // 'contact' => 'required|integer'
+            'term' => 'required|integer',
+           
         ]);
 
-        // return $request;
-        $students = new Student();
-        $students->stud_name = $request->name;
-        $students->stud_age = $request->age;
-        $students->stud_grade = $request->grade;
-        $students->stud_term = $request->term;
-        // $students->guardian_name = $request->guardian;
-        // $students->guardian_contact = $request->contact;
-        $students->save();
-       
-     
-        if ($students)
-            return response()->json([
-                'success' => true,
-                'students' => $students
-            ]);
-        else
+        if ($validator->fails()) {
+            return response()->json(["error" => $validator->errors()], 400);
+        }
+    
+        try {
+            
+            $students = new Student();
+            $students->stud_name = $request->name;
+            $students->stud_age = $request->age;
+            $students->stud_grade = $request->grade;
+            $students->stud_term = $request->term;
+            $students->save();
+
+                return response()->json([
+                    'success' => true,
+                    'students' => $students
+                ]);
+            
+               
+        } catch (ModelNotFoundException $e) {
             return response()->json([
                 'success' => false,
                 'message' => 'Sorry, student could not be added'
             ], 500);
+        }
+       
     }
 
     
@@ -130,5 +137,12 @@ class StudentController extends Controller
     public function destroy(Student $student)
     {
         //
+    }
+
+    public function getStudent(Request $request) {
+
+        $querys = $request['query'];
+        $students = Student::where('stud_name','like','%'.$querys.'%')->get();
+        return response()->json($students);
     }
 }

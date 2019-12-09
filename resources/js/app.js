@@ -38,6 +38,10 @@ import VueAuth from '@websanova/vue-auth'
 import auth from './auth'
 import routes from './routes'
 import store from '@/store'
+import Vuelidate from 'vuelidate'
+Vue.use(Vuelidate)
+
+
 
 import '@/plugins'
 

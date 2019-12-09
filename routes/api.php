@@ -33,6 +33,7 @@ Route::group(['middleware' => 'auth.jwt'], function () {
     Route::post('students', 'StudentController@store');
     Route::put('students/{id}', 'StudentController@update');
     Route::delete('students/{id}', 'StudentController@destroy');
+    Route::get('/search', 'StudentController@getStudent');
 
     Route::get('guardian', 'GuardianController@index');
     Route::get('guardian/{id}', 'GuardianController@show');

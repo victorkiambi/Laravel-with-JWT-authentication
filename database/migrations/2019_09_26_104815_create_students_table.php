@@ -19,10 +19,6 @@ class CreateStudentsTable extends Migration
             $table->integer('stud_grade');
             $table->integer('stud_age');
             $table->integer('stud_term');
-            $table->string('guardian_name');
-            $table->integer('guardian_contact');
-
-
             $table->timestamps();
         });
     }

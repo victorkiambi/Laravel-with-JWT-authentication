@@ -35,7 +35,7 @@
         routes: {
           // UNLOGGED
           unlogged: [
-            { name: 'Register', path: 'register' },
+            // { name: 'Register', path: 'register' },
             { name: 'Login', path: 'login'}
           ],
           // LOGGED USER
